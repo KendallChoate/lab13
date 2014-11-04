@@ -16,7 +16,7 @@ drawpad = Canvas(root, width=800,height=600, background='white')
 player = drawpad.create_oval(390,580,410,600, fill="red")
 enemy1 = drawpad.create_oval(290,480,310,500, fill="blue")
 enemy2 = drawpad.create_oval(490,280,510,300, fill="blue")
-enemy3 = drawpad.create_oval(190,680,210,700, fill="blue")
+enemy3 = drawpad.create_oval(190,80,210,100, fill="blue")
 
 # Create your "enemies" here, before the class
 
