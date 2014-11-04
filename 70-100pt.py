@@ -17,7 +17,7 @@ player = drawpad.create_oval(390,580,410,600, fill="red")
 enemy1 = drawpad.create_oval(290,480,310,500, fill="blue")
 enemy2 = drawpad.create_oval(490,280,510,300, fill="blue")
 enemy3 = drawpad.create_oval(190,80,210,100, fill="blue")
-
+direction = 1
 # Create your "enemies" here, before the class
 
 
@@ -72,7 +72,12 @@ class MyApp:
 	    global drawpad
 	    global player
 	    global enemy1
-	    #drawpad.move(enemy1, -10, 0)
+	    x1, y1, x2, y2 = drawpad.coords(enemy1)
+            if x2 > drawpad.winfo_width():
+                direction = - 801
+            elif x1 < 0:
+                direction = 5
+            drawpad.move(enemy1,direction,0)    
 	    # Remember to include your "enemies" with "global"
 	    
 	    # Uncomment this when you're ready to test out your animation!
